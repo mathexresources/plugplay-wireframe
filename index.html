@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elektronika do starších aut, kterou zapojíš sám | PlugPlay.cz</title>
+  <meta name="description" content="USB-C nabíjení, Bluetooth, parkovací senzory nebo automatická světla do starších aut. Ověřená kompatibilita s tvým modelem a návod krok za krokem.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link href="assets/wf.css" rel="stylesheet">
+</head>
+<body data-step="1">
+<div id="wf-header"></div>
+
+<main>
+  <!-- Hero = car picker. No category grid or promo carousel: the first step is telling us your car. -->
+  <section class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <p class="text-uppercase small fw-bold text-secondary mb-2">Plug &amp; play autoelektronika</p>
+        <h1 class="display-5 mb-3">Moderní výbava do staršího auta. Zapojíš ji sám.</h1>
+        <p class="lead">USB-C nabíjení, Bluetooth, parkovací senzory nebo automatická světla. Každý produkt jsme vyzkoušeli v konkrétním modelu a přidali k němu návod krok za krokem.</p>
+
+        <div class="wf-card p-4 mt-4">
+          <h2 class="h4 mb-3"><span class="badge text-bg-dark rounded-circle me-2">1</span>Jaké máš auto?</h2>
+          <div class="d-flex flex-wrap align-items-center gap-2 small mb-3" data-auth="in">
+            <span class="text-secondary"><i class="bi bi-person-check"></i> Z tvé garáže:</span>
+            <a href="garaz.html" class="wf-chip on text-decoration-none">Moje E46</a>
+            <a href="garaz.html" class="wf-chip text-decoration-none text-reset">Rodinná Fabia</a>
+            <span class="text-secondary">nebo vyber jiné:</span>
+          </div>
+          <div class="row g-2">
+            <div class="col-sm-4">
+              <label class="form-label small mb-1">Značka</label>
+              <select class="form-select"><option>BMW</option></select>
+            </div>
+            <div class="col-sm-4">
+              <label class="form-label small mb-1">Model</label>
+              <select class="form-select"><option>Řada 3 (E46)</option></select>
+            </div>
+            <div class="col-sm-4">
+              <label class="form-label small mb-1">Karoserie</label>
+              <select class="form-select"><option>Touring</option><option>Sedan</option><option>Coupé</option><option>Cabrio</option><option>Compact</option></select>
+            </div>
+          </div>
+          <a href="garaz.html" class="btn btn-dark btn-lg w-100 mt-3">Ukázat, co jde vylepšit <i class="bi bi-arrow-right"></i></a>
+          <div class="d-flex flex-wrap justify-content-between gap-2 small mt-2">
+            <a href="#" class="link-secondary">Nevíš si rady s modelem? Poradíme</a>
+            <a href="katalog.html" class="link-secondary">Procházet celý katalog →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 position-relative">
+        <div class="wf-img" style="aspect-ratio:4/3"><span>Foto: středová konzole BMW E46 s USB-C nabíječkou</span></div>
+        <div class="wf-note position-absolute" style="bottom:-1rem;left:-1rem;max-width:270px">Hlavní plocha neslouží akčnímu banneru. Jediná výzva je zadat auto – celý web se pak přizpůsobí. Přihlášený rovnou vidí auta ze své garáže.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular cars as one-click shortcuts (also internal links for model landing pages) -->
+  <section class="container pb-5">
+    <h2 class="h4 mb-3">Nejčastější modely našich zákazníků</h2>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+      <div class="col"><a href="garaz.html" class="wf-box d-block p-2 text-center text-reset text-decoration-none h-100"><div class="wf-img mb-2" style="aspect-ratio:16/9"><span>silueta</span></div><b>BMW řady 3 (E46)</b><div class="small text-secondary">28 upgradů</div></a></div>
+      <div class="col"><a href="garaz.html" class="wf-box d-block p-2 text-center text-reset text-decoration-none h-100"><div class="wf-img mb-2" style="aspect-ratio:16/9"><span>silueta</span></div><b>Škoda Octavia I</b><div class="small text-secondary">24 upgradů</div></a></div>
+      <div class="col"><a href="garaz.html" class="wf-box d-block p-2 text-center text-reset text-decoration-none h-100"><div class="wf-img mb-2" style="aspect-ratio:16/9"><span>silueta</span></div><b>VW Golf IV</b><div class="small text-secondary">21 upgradů</div></a></div>
+      <div class="col"><a href="garaz.html" class="wf-box d-block p-2 text-center text-reset text-decoration-none h-100"><div class="wf-img mb-2" style="aspect-ratio:16/9"><span>silueta</span></div><b>Škoda Fabia I</b><div class="small text-secondary">19 upgradů</div></a></div>
+      <div class="col"><a href="garaz.html" class="wf-box d-block p-2 text-center text-reset text-decoration-none h-100"><div class="wf-img mb-2" style="aspect-ratio:16/9"><span>silueta</span></div><b>Audi A4 (B6)</b><div class="small text-secondary">16 upgradů</div></a></div>
+      <div class="col"><a href="katalog.html" class="wf-box d-flex flex-column justify-content-center h-100 p-2 text-center text-reset text-decoration-none"><i class="bi bi-plus-circle fs-3"></i><b>Jiné auto</b><div class="small text-secondary">univerzální produkty</div></a></div>
+    </div>
+  </section>
+
+  <!-- How it works = value proposition -->
+  <section class="bg-white border-top border-bottom py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Jak to funguje</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-3"><i class="bi bi-car-front fs-1"></i><h3 class="h5 mt-2">1. Zadáš svoje auto</h3><p class="small text-secondary">Ukážeme jen produkty, které do něj opravdu pasují.</p></div>
+        <div class="col-md-3"><i class="bi bi-grid-3x3-gap fs-1"></i><h3 class="h5 mt-2">2. Vybereš, co vylepšit</h3><p class="small text-secondary">Klikneš na část auta – interiér, světla, zamykání nebo kufr.</p></div>
+        <div class="col-md-3"><i class="bi bi-patch-check fs-1"></i><h3 class="h5 mt-2">3. Víš, do čeho jdeš</h3><p class="small text-secondary">Ještě před nákupem vidíš náročnost, čas montáže, potřebné nářadí a výsledek našeho testu.</p></div>
+        <div class="col-md-3"><i class="bi bi-tools fs-1"></i><h3 class="h5 mt-2">4. Zapojíš to sám</h3><p class="small text-secondary">Podle návodu s fotkami a videem pro tvůj model. Kabeláž s konektorem je v balení.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before / after showcase -->
+  <section class="container py-5">
+    <div class="d-flex justify-content-between align-items-end mb-3">
+      <h2 class="mb-0">Před a po montáži</h2>
+      <a href="#" class="small">Další proměny →</a>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="wf-product p-0">
+          <div class="d-flex"><div class="wf-img flex-fill" style="aspect-ratio:1;border-radius:.6rem 0 0 0"><span>PŘED</span></div><div class="wf-img flex-fill" style="aspect-ratio:1;border-radius:0 .6rem 0 0"><span>PO</span></div></div>
+          <div class="p-3"><b>BMW E46: USB-C místo zapalovače</b><div class="small text-secondary">15 minut · <span class="wf-diff"><i class="bi bi-wrench on"></i><i class="bi bi-wrench"></i><i class="bi bi-wrench"></i></span> snadné</div></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="wf-product p-0">
+          <div class="d-flex"><div class="wf-img flex-fill" style="aspect-ratio:1;border-radius:.6rem 0 0 0"><span>PŘED</span></div><div class="wf-img flex-fill" style="aspect-ratio:1;border-radius:0 .6rem 0 0"><span>PO</span></div></div>
+          <div class="p-3"><b>BMW E46: Bluetooth v originálním rádiu</b><div class="small text-secondary">30 minut · <span class="wf-diff"><i class="bi bi-wrench on"></i><i class="bi bi-wrench on"></i><i class="bi bi-wrench"></i></span> střední</div></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="wf-product p-0">
+          <div class="d-flex"><div class="wf-img flex-fill" style="aspect-ratio:1;border-radius:.6rem 0 0 0"><span>PŘED</span></div><div class="wf-img flex-fill" style="aspect-ratio:1;border-radius:0 .6rem 0 0"><span>PO</span></div></div>
+          <div class="p-3"><b>VW Golf IV: zadní parkovací senzory</b><div class="small text-secondary">3 hodiny · <span class="wf-diff"><i class="bi bi-wrench on"></i><i class="bi bi-wrench on"></i><i class="bi bi-wrench on"></i></span> pokročilé</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust block -->
+  <section class="container pb-5">
+    <div class="wf-box p-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-4"><div class="wf-img" style="aspect-ratio:16/10"><span>Foto: testování v naší dílně</span></div></div>
+        <div class="col-md-8">
+          <h2 class="h3">Prodáváme jen to, co jsme sami zapojili</h2>
+          <p class="text-secondary mb-3">Každý produkt nejdřív vyzkoušíme v reálném autě. V recenzi najdeš výhody i slabiny – nic nepřikrášlujeme.</p>
+          <div class="d-flex flex-wrap gap-3 small">
+            <span><i class="bi bi-check2-circle"></i> Ověřená kompatibilita</span>
+            <span><i class="bi bi-camera-video"></i> Návody s fotkami a videem</span>
+            <span><i class="bi bi-cpu"></i> Vlastní vývoj elektroniky</span>
+            <span><i class="bi bi-box-seam"></i> Zásilkovna od 69 Kč</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO intro text -->
+  <section class="container pb-4">
+    <h2 class="h5">Autoelektronika do starších aut bez návštěvy servisu</h2>
+    <p class="small text-secondary mb-2">Starší auto nemusí znamenat zastaralou výbavu. Nabízíme USB-C nabíječky místo zapalovače, Bluetooth adaptéry do originálních rádií, LED osvětlení, parkovací senzory i moduly pro komfortní zamykání. U každého produktu uvádíme, se kterými modely jsme ho ověřili, jak náročná je montáž a jaké nářadí budeš potřebovat.</p>
+    <div class="wf-note seo d-inline-block">Krátký úvodní text s hlavními klíčovými slovy (autoelektronika, USB-C do auta, Bluetooth do auta) a interní odkazy na modely.</div>
+  </section>
+</main>
+
+<div id="wf-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/wf.js"></script>
+</body>
+</html>

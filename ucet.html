@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Můj účet | PlugPlay.cz</title>
+  <meta name="robots" content="noindex">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link href="assets/wf.css" rel="stylesheet">
+</head>
+<body data-step="0" data-auth="1">
+<div id="wf-header"></div>
+
+<main class="container py-4">
+  <div class="d-flex align-items-center gap-3 mb-4">
+    <div class="wf-img rounded-circle flex-shrink-0" style="width:56px;height:56px;min-height:0"></div>
+    <div><h1 class="h3 mb-0">Ahoj, Petře</h1><div class="small text-secondary">petr@example.cz · zákazníkem od roku 2026</div></div>
+  </div>
+
+  <div class="row g-4">
+    <!-- Account nav -->
+    <aside class="col-lg-3">
+      <div class="list-group wf-card overflow-hidden" role="tablist" id="account-nav">
+        <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#garaz"><i class="bi bi-car-front me-2"></i>Moje garáž <span class="badge text-bg-dark float-end">2</span></a>
+        <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#objednavky"><i class="bi bi-box-seam me-2"></i>Objednávky</a>
+        <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#navody"><i class="bi bi-book me-2"></i>Moje návody</a>
+        <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#plany"><i class="bi bi-bookmark me-2"></i>Uložené plány</a>
+        <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#udaje"><i class="bi bi-person me-2"></i>Osobní údaje a adresy</a>
+        <a class="list-group-item list-group-item-action text-secondary" href="index.html" data-logout><i class="bi bi-box-arrow-right me-2"></i>Odhlásit se</a>
+      </div>
+    </aside>
+
+    <section class="col-lg-9 tab-content">
+      <!-- ============ GARÁŽ ============ -->
+      <div class="tab-pane fade show active" id="garaz">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="mb-0">Moje garáž</h2>
+          <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addCar"><i class="bi bi-plus-lg"></i> Přidat auto</button>
+        </div>
+
+        <div class="vstack gap-4">
+          <!-- Car 1 (active) -->
+          <div class="wf-card p-0 overflow-hidden">
+            <div class="row g-0">
+              <div class="col-md-4"><div class="wf-img h-100 rounded-0 border-0 border-end" style="min-height:180px"><span>fotka tvého auta</span></div></div>
+              <div class="col-md-8 p-4">
+                <div class="d-flex flex-wrap justify-content-between gap-2">
+                  <div>
+                    <span class="badge text-bg-primary mb-1"><i class="bi bi-star-fill"></i> Aktivní auto</span>
+                    <h3 class="h4 mb-0">Moje E46 <span class="text-secondary fs-6">BMW 320d Touring (E46) · 2003</span></h3>
+                    <div class="small text-secondary">Motor 2.0 diesel · rádio Business CD · bez navigace</div>
+                  </div>
+                  <div class="dropdown align-self-start">
+                    <button class="btn btn-sm btn-outline-dark" data-bs-toggle="dropdown" aria-label="Možnosti"><i class="bi bi-three-dots"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Upravit výbavu</a></li>
+                      <li><a class="dropdown-item" href="#">Nahrát fotku</a></li>
+                      <li><a class="dropdown-item text-danger" href="#">Odebrat z garáže</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="my-3">
+                  <div class="d-flex justify-content-between small"><b>Vylepšeno</b><span>3 z 28 upgradů</span></div>
+                  <div class="progress" style="height:8px" role="progressbar" aria-label="Vylepšeno"><div class="progress-bar bg-dark" style="width:11%"></div></div>
+                </div>
+
+                <div class="small fw-bold mb-1">Namontováno</div>
+                <div class="d-flex flex-wrap gap-2 mb-3 small">
+                  <span class="wf-chip on"><i class="bi bi-check-lg"></i> USB-C nabíječka 60 W</span>
+                  <span class="wf-chip on"><i class="bi bi-check-lg"></i> Bluetooth adaptér</span>
+                  <span class="wf-chip"><i class="bi bi-hourglass-split"></i> LED osvětlení SPZ – čeká na montáž</span>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2">
+                  <a href="garaz.html" class="btn btn-dark btn-sm">Co dalšího vylepšit <i class="bi bi-arrow-right"></i></a>
+                  <a href="#navody" class="btn btn-outline-dark btn-sm" data-goto>Návody k tomuto autu (3)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 2 -->
+          <div class="wf-card p-0 overflow-hidden">
+            <div class="row g-0">
+              <div class="col-md-4"><div class="wf-img h-100 rounded-0 border-0 border-end" style="min-height:160px"><span>silueta modelu</span></div></div>
+              <div class="col-md-8 p-4">
+                <div class="d-flex flex-wrap justify-content-between gap-2">
+                  <div>
+                    <h3 class="h4 mb-0">Rodinná Fabia <span class="text-secondary fs-6">Škoda Fabia I · 2005</span></h3>
+                    <div class="small text-secondary">Výbava zatím není vyplněná. <a href="#" class="link-secondary">Doplň ji</a> a doporučíme ti přesněji.</div>
+                  </div>
+                  <button class="btn btn-sm btn-outline-dark align-self-start" aria-label="Možnosti"><i class="bi bi-three-dots"></i></button>
+                </div>
+                <div class="my-3">
+                  <div class="d-flex justify-content-between small"><b>Vylepšeno</b><span>0 z 19 upgradů</span></div>
+                  <div class="progress" style="height:8px" role="progressbar" aria-label="Vylepšeno"><div class="progress-bar bg-dark" style="width:0"></div></div>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-outline-dark btn-sm"><i class="bi bi-star"></i> Nastavit jako aktivní</button>
+                  <a href="garaz.html" class="btn btn-outline-dark btn-sm">Zobrazit upgrady</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add car -->
+          <button class="wf-box p-4 text-center w-100" data-bs-toggle="modal" data-bs-target="#addCar">
+            <i class="bi bi-plus-circle fs-2"></i><div class="fw-bold">Přidat další auto</div><div class="small text-secondary">služební, víkendové nebo rozpracovaný projekt</div>
+          </button>
+        </div>
+
+        <div class="wf-note mt-4 d-inline-block">Podle aktivního auta se filtruje celý web (přepínač v hlavičce). Vyplněná výbava, třeba rádio nebo motor, zpřesňuje kompatibilitu.</div>
+      </div>
+
+      <!-- ============ OBJEDNÁVKY ============ -->
+      <div class="tab-pane fade" id="objednavky">
+        <h2 class="mb-3">Objednávky</h2>
+        <div class="table-responsive wf-card">
+          <table class="table align-middle mb-0">
+            <thead><tr><th>Číslo</th><th>Datum</th><th>Auto</th><th>Stav</th><th class="text-end">Cena</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><b>#2026-0142</b></td><td>22. 10. 2026</td><td>BMW E46</td><td><span class="badge text-bg-warning">Balíme</span></td><td class="text-end">2 149 Kč</td><td class="text-end"><a href="hotovo.html" class="btn btn-sm btn-outline-dark">Detail</a></td></tr>
+              <tr><td><b>#2026-0087</b></td><td>3. 8. 2026</td><td>BMW E46</td><td><span class="badge text-bg-success">Doručeno</span></td><td class="text-end">459 Kč</td><td class="text-end"><a href="#" class="btn btn-sm btn-outline-dark">Detail</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="small text-secondary mt-2"><i class="bi bi-arrow-repeat"></i> Vrácení zboží a reklamaci vyřídíš přímo v detailu objednávky.</div>
+      </div>
+
+      <!-- ============ NÁVODY ============ -->
+      <div class="tab-pane fade" id="navody">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+          <h2 class="mb-0">Moje návody</h2>
+          <select class="form-select form-select-sm w-auto" aria-label="Auto"><option>Všechna auta</option><option>Moje E46</option><option>Rodinná Fabia</option></select>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-3">
+          <div class="col"><div class="wf-box p-3 d-flex gap-3"><div class="wf-img flex-shrink-0" style="width:96px;height:72px;min-height:0"><span><i class="bi bi-play"></i></span></div><div><b>USB-C nabíječka v BMW E46</b><div class="small text-secondary">6 kroků · video 4 min</div><span class="badge text-bg-success">Hotovo</span></div></div></div>
+          <div class="col"><div class="wf-box p-3 d-flex gap-3"><div class="wf-img flex-shrink-0" style="width:96px;height:72px;min-height:0"><span><i class="bi bi-play"></i></span></div><div><b>Bluetooth adaptér v BMW E46</b><div class="small text-secondary">8 kroků · video 6 min</div><span class="badge text-bg-success">Hotovo</span></div></div></div>
+          <div class="col"><div class="wf-box p-3 d-flex gap-3"><div class="wf-img flex-shrink-0" style="width:96px;height:72px;min-height:0"><span><i class="bi bi-play"></i></span></div><div><b>LED osvětlení SPZ v BMW E46</b><div class="small text-secondary">5 kroků · video 3 min</div><span class="badge text-bg-light border">Krok 2 z 5</span></div></div></div>
+        </div>
+        <div class="wf-note mt-4 d-inline-block">Návod si pamatuje, kde jsi skončil – montáž v garáži se často přerušuje.</div>
+      </div>
+
+      <!-- ============ PLÁNY ============ -->
+      <div class="tab-pane fade" id="plany">
+        <h2 class="mb-3">Uložené plány</h2>
+        <div class="wf-card p-3 d-flex flex-wrap align-items-center gap-3">
+          <i class="bi bi-car-front fs-3"></i>
+          <div class="flex-fill"><b>Fabia – příprava na zimu</b><div class="small text-secondary">Škoda Fabia I · 3 upgrady · zhruba 2 hodiny · 2 340 Kč · uloženo 1. 10. 2026</div></div>
+          <a href="plan.html" class="btn btn-sm btn-dark">Otevřít plán</a>
+          <button class="btn btn-sm btn-outline-dark" aria-label="Sdílet"><i class="bi bi-share"></i></button>
+          <button class="btn btn-sm btn-outline-dark" aria-label="Smazat"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+
+      <!-- ============ ÚDAJE ============ -->
+      <div class="tab-pane fade" id="udaje">
+        <h2 class="mb-3">Osobní údaje a adresy</h2>
+        <div class="row g-4">
+          <div class="col-md-6"><div class="wf-card p-3">
+            <h3 class="h6 fw-bold">Kontaktní údaje</h3>
+            <div class="mb-2"><label class="form-label small" for="un">Jméno a příjmení</label><input class="form-control form-control-sm" id="un" value="Petr Novák"></div>
+            <div class="mb-2"><label class="form-label small" for="ue">E-mail</label><input class="form-control form-control-sm" id="ue" value="petr@example.cz"></div>
+            <div class="mb-3"><label class="form-label small" for="ut">Telefon</label><input class="form-control form-control-sm" id="ut" value="+420 …"></div>
+            <button class="btn btn-sm btn-dark">Uložit změny</button> <a href="#" class="small link-secondary ms-2">Změnit heslo</a>
+          </div></div>
+          <div class="col-md-6"><div class="wf-card p-3">
+            <h3 class="h6 fw-bold">Doručovací adresy</h3>
+            <div class="wf-box p-2 small mb-2"><i class="bi bi-box-seam"></i> <b>Zásilkovna</b> – Praha 4, Budějovická <span class="badge text-bg-light border">výchozí</span></div>
+            <div class="wf-box p-2 small mb-2"><i class="bi bi-house"></i> Domů – Ulice 12, Praha</div>
+            <a href="#" class="small">Přidat adresu</a>
+            <hr>
+            <h3 class="h6 fw-bold">Upozornění e-mailem</h3>
+            <div class="form-check form-switch small"><input class="form-check-input" type="checkbox" checked id="ntf1"><label class="form-check-label" for="ntf1">Nové upgrady pro moje auta</label></div>
+            <div class="form-check form-switch small"><input class="form-check-input" type="checkbox" id="ntf2"><label class="form-check-label" for="ntf2">Akce a slevy</label></div>
+          </div></div>
+        </div>
+        <a href="#" class="small text-danger d-inline-block mt-4">Zrušit účet</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- Add car modal -->
+<div class="modal fade" id="addCar" tabindex="-1" aria-labelledby="addCarTitle">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content wf-card">
+      <div class="modal-header"><h2 class="modal-title h5" id="addCarTitle">Přidat auto do garáže</h2><button class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button></div>
+      <div class="modal-body">
+        <div class="row g-2 mb-3">
+          <div class="col-4"><label class="form-label small">Značka</label><select class="form-select"><option>VW</option></select></div>
+          <div class="col-4"><label class="form-label small">Model</label><select class="form-select"><option>Golf IV</option></select></div>
+          <div class="col-4"><label class="form-label small">Rok výroby</label><select class="form-select"><option>2002</option></select></div>
+        </div>
+        <div class="mb-3"><label class="form-label small" for="nick">Přezdívka <span class="text-secondary">(nepovinné)</span></label><input class="form-control" id="nick" placeholder="např. Golfík"></div>
+        <details class="wf-box p-2 small">
+          <summary class="fw-bold">Výbava – pro přesnější doporučení</summary>
+          <div class="row g-2 mt-1">
+            <div class="col-6"><label class="form-label small">Rádio</label><select class="form-select form-select-sm"><option>Nevím</option></select></div>
+            <div class="col-6"><label class="form-label small">Motor</label><select class="form-select form-select-sm"><option>Nevím</option></select></div>
+            <div class="col-12"><label class="form-label small" for="vin">VIN <span class="text-secondary">(výbavu podle něj dohledáme za tebe)</span></label><input class="form-control form-control-sm" id="vin"></div>
+          </div>
+        </details>
+        <div class="form-check small mt-3"><input class="form-check-input" type="checkbox" id="mkact"><label class="form-check-label" for="mkact">Nastavit jako aktivní auto</label></div>
+      </div>
+      <div class="modal-footer"><button class="btn btn-outline-dark" data-bs-dismiss="modal">Zrušit</button><button class="btn btn-dark" data-bs-dismiss="modal">Uložit do garáže</button></div>
+    </div>
+  </div>
+</div>
+
+<div id="wf-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/wf.js"></script>
+<script>
+  // Open the section named in the URL hash (ucet.html#objednavky) and keep in-page links working.
+  const openTab = hash => {
+    const link = document.querySelector(`#account-nav [href="${hash}"]`);
+    if (link) bootstrap.Tab.getOrCreateInstance(link).show();
+  };
+  if (location.hash) openTab(location.hash);
+  window.addEventListener('hashchange', () => openTab(location.hash));
+  document.querySelectorAll('[data-goto]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); openTab(a.getAttribute('href')); }));
+</script>
+</body>
+</html>

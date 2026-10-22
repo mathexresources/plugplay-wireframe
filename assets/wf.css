@@ -1,0 +1,143 @@
+/* PlugPlay.cz – wireframe layer on top of Bootstrap 5.
+   Everything is grayscale on purpose; the one accent colour marks the "journey" path. */
+
+:root {
+  --wf-ink: #222;
+  --wf-line: #9a9a9a;
+  --wf-fill: #ececec;
+  --wf-fill-2: #f6f6f6;
+  --wf-accent: #1f6feb;
+  --wf-note: #fff6b3;
+  --bs-body-font-family: "Inter", system-ui, sans-serif;
+  --bs-body-color: var(--wf-ink);
+}
+
+body { background: #fafafa; }
+
+.wf-hand { font-family: "Kalam", cursive; }
+h1, h2, h3, .display-5, .display-6 { font-family: "Kalam", cursive; font-weight: 700; }
+
+/* ---------- placeholders ---------- */
+.wf-img {
+  position: relative;
+  background: var(--wf-fill);
+  border: 2px solid var(--wf-line);
+  border-radius: .5rem;
+  overflow: hidden;
+  min-height: 80px;
+}
+.wf-img::before, .wf-img::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to top right, transparent calc(50% - 1px), var(--wf-line) 50%, transparent calc(50% + 1px));
+}
+.wf-img::after { transform: scaleX(-1); }
+.wf-img > span:not(.badge) {
+  position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  background: var(--wf-fill); padding: .1rem .5rem; font-size: .8rem; color: #666; white-space: nowrap;
+}
+.wf-lines span { display: block; height: .55rem; background: var(--wf-fill); border-radius: 3px; margin-bottom: .45rem; }
+.wf-box { border: 2px dashed var(--wf-line); border-radius: .75rem; background: #fff; }
+.wf-card { border: 2px solid var(--wf-ink); border-radius: .75rem; background: #fff; box-shadow: 4px 4px 0 var(--wf-ink); }
+.btn { border-width: 2px; font-weight: 600; }
+.btn-dark { box-shadow: 3px 3px 0 var(--wf-accent); }
+
+/* ---------- top bar ---------- */
+.wf-logo { font-family: "Kalam", cursive; font-weight: 700; font-size: 1.6rem; color: var(--wf-ink); text-decoration: none; }
+.wf-logo b { color: var(--wf-accent); }
+.wf-car-pill {
+  border: 2px solid var(--wf-ink); border-radius: 999px; padding: .3rem .4rem .3rem .9rem;
+  background: #fff; display: inline-flex; align-items: center; gap: .5rem; font-size: .9rem;
+}
+.wf-car-pill .badge { font-weight: 500; }
+
+/* ---------- journey stepper (the spine of the whole site) ---------- */
+.wf-journey { background: #fff; border-bottom: 2px solid var(--wf-ink); }
+.wf-journey ol { list-style: none; display: flex; margin: 0; padding: 0; overflow-x: auto; }
+.wf-journey li { flex: 1 0 auto; position: relative; }
+.wf-journey a {
+  display: flex; align-items: center; gap: .5rem; padding: .7rem 1rem;
+  color: #888; text-decoration: none; font-size: .9rem; white-space: nowrap;
+}
+.wf-journey .num {
+  width: 1.7rem; height: 1.7rem; border-radius: 50%; border: 2px solid currentColor;
+  display: inline-grid; place-items: center; font-weight: 700; font-size: .8rem;
+}
+.wf-journey li.done a { color: var(--wf-ink); }
+.wf-journey li.done .num { background: var(--wf-ink); color: #fff; border-color: var(--wf-ink); }
+.wf-journey li.active a { color: var(--wf-accent); font-weight: 700; }
+.wf-journey li.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 4px; background: var(--wf-accent); }
+
+/* ---------- sticky notes (UX annotations) ---------- */
+.wf-note {
+  background: var(--wf-note); border: 1px solid #e0cf5c; border-radius: 2px;
+  padding: .5rem .7rem; font-family: "Kalam", cursive; font-size: .95rem; line-height: 1.25;
+  box-shadow: 2px 3px 6px rgba(0,0,0,.12); transform: rotate(-1deg);
+}
+.wf-note::before { content: "UX: "; font-weight: 700; }
+body.wf-hide-notes .wf-note { display: none !important; }
+
+/* ---------- difficulty meter ---------- */
+.wf-diff { display: inline-flex; gap: 2px; vertical-align: middle; }
+.wf-diff i { color: #ccc; }
+.wf-diff i.on { color: var(--wf-ink); }
+
+/* ---------- car blueprint with hotspots (garage page) ---------- */
+.wf-blueprint {
+  position: relative; aspect-ratio: 16 / 7; border: 2px solid var(--wf-ink); border-radius: 1rem;
+  background:
+    linear-gradient(#e6e6e6 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, #e6e6e6 1px, transparent 1px) 0 0 / 24px 24px, #fff;
+}
+.wf-blueprint svg { position: absolute; inset: 6% 4%; width: 92%; height: 88%; }
+.wf-hot {
+  position: absolute; transform: translate(-50%, -50%);
+  border: 2px solid var(--wf-ink); background: #fff; border-radius: 999px;
+  padding: .25rem .7rem .25rem .3rem; font-size: .85rem; display: flex; align-items: center; gap: .4rem;
+  cursor: pointer; white-space: nowrap;
+}
+.wf-hot .dot {
+  width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--wf-ink); color: #fff;
+  display: grid; place-items: center; font-size: .75rem; font-weight: 700;
+}
+.wf-hot.active { background: var(--wf-accent); color: #fff; border-color: var(--wf-accent); }
+.wf-hot.active .dot { background: #fff; color: var(--wf-accent); }
+
+/* ---------- chips ---------- */
+.wf-chip {
+  border: 2px solid var(--wf-line); border-radius: 999px; padding: .3rem .85rem; background: #fff;
+  font-size: .9rem; display: inline-flex; align-items: center; gap: .35rem; cursor: pointer;
+}
+.wf-chip.on { border-color: var(--wf-ink); background: var(--wf-ink); color: #fff; }
+
+/* ---------- product card ---------- */
+.wf-product { border: 2px solid var(--wf-ink); border-radius: .75rem; background: #fff; height: 100%; display: flex; flex-direction: column; }
+.wf-product .wf-img { border: 0; border-bottom: 2px solid var(--wf-line); border-radius: .6rem .6rem 0 0; aspect-ratio: 4/3; }
+.wf-fit { font-size: .75rem; font-weight: 700; color: var(--wf-accent); text-transform: uppercase; letter-spacing: .03em; }
+
+/* ---------- plan timeline (cart) ---------- */
+.wf-timeline { border-left: 3px dashed var(--wf-line); margin-left: 1rem; padding-left: 1.75rem; }
+.wf-timeline .step { position: relative; }
+.wf-timeline .step::before {
+  content: attr(data-n); position: absolute; left: -2.85rem; top: .9rem;
+  width: 2rem; height: 2rem; border-radius: 50%; background: var(--wf-ink); color: #fff;
+  display: grid; place-items: center; font-weight: 700;
+}
+
+/* ---------- floating wireframe nav ---------- */
+.wf-dev {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 1050;
+  background: var(--wf-ink); color: #fff; border-radius: .75rem; padding: .6rem .8rem; font-size: .8rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25); max-width: calc(100vw - 2rem);
+}
+.wf-dev a { color: #fff; }
+.wf-dev .form-check-input { cursor: pointer; }
+
+@media (max-width: 575.98px) {
+  .wf-hot { font-size: .7rem; padding: .15rem .5rem .15rem .2rem; }
+  .wf-hot .label { display: none; }
+  .wf-blueprint { aspect-ratio: 4 / 3; }
+}
+
+button.wf-car-pill { color: inherit; font: inherit; font-size: .9rem; }
+.wf-note.seo { background: #dff3e4; border-color: #8cc79b; }
+.wf-note.seo::before { content: "SEO: "; }
