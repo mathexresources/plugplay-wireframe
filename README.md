@@ -4,7 +4,7 @@
 > ale nejde o skutečný obchod – nic se neprodává ani neplatí. Platba kartou končí stránkou
 > „Tady by byl paywall“ místo platební brány.
 
-Postaveno na **Laravel 13** (PHP 8.3+), Blade + Bootstrap 5 (vše přibalené v `public/vendor`, žádný build ani CDN),
+Postaveno na **Laravel 13** (PHP 8.3+, v Dockeru nginx + PHP-FPM), Blade + Bootstrap 5 (vše přibalené v `public/vendor`, žádný build ani CDN),
 databáze **SQLite** (výchozí) nebo **MariaDB/MySQL**. Vychází z wireframu ve složce [`wireframe/`](wireframe/).
 
 ## Demo účty (po `db:seed`)
