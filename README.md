@@ -1,6 +1,6 @@
 # PlugPlay.cz – e-shop s autoelektronikou do starších aut
 
-> **Školní projekt** do předmětu *Malé a střední podnikání*. E-shop je plně funkční včetně administrace,
+> **Školní projekt.** E-shop je plně funkční včetně administrace,
 > ale nejde o skutečný obchod – nic se neprodává ani neplatí. Platba kartou končí stránkou
 > „Tady by byl paywall“ místo platební brány.
 

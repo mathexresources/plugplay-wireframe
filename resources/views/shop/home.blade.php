@@ -5,7 +5,7 @@
   <div class="pp-school-hero p-3 d-flex flex-wrap align-items-center gap-3">
     <i class="bi bi-mortarboard fs-2"></i>
     <div class="flex-fill">
-      <b>Tohle je školní projekt</b> do předmětu Malé a střední podnikání. E-shop je plně funkční včetně administrace,
+      <b>Tohle je školní projekt.</b> E-shop je plně funkční včetně administrace,
       ale <b>nic se neprodává ani neplatí</b> – platba kartou končí ukázkovou stránkou místo platební brány.
     </div>
     <span class="small text-secondary">Demo účty: <code>petr@example.cz / heslo123</code> · admin <code>admin@plugplay.cz / admin123</code></span>
