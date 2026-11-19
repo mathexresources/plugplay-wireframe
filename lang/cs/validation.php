@@ -1,0 +1,36 @@
+<?php
+
+return [
+    'accepted' => 'Pole :attribute musí být potvrzeno.',
+    'alpha_dash' => ':attribute může obsahovat jen písmena bez diakritiky, číslice, pomlčky a podtržítka.',
+    'alpha_num' => ':attribute může obsahovat jen písmena a číslice.',
+    'array' => ':attribute musí být seznam.',
+    'between' => ['numeric' => ':attribute musí být mezi :min a :max.', 'string' => ':attribute musí mít :min až :max znaků.', 'file' => 'Soubor :attribute musí mít :min až :max kB.', 'array' => ':attribute musí mít :min až :max položek.'],
+    'boolean' => ':attribute musí být ano nebo ne.',
+    'confirmed' => 'Hesla se neshodují.',
+    'current_password' => 'Heslo nesedí.',
+    'date' => ':attribute není platné datum.',
+    'email' => ':attribute musí být platná e-mailová adresa.',
+    'exists' => 'Vybraná hodnota pole :attribute neexistuje.',
+    'image' => ':attribute musí být obrázek.',
+    'in' => 'Vybraná hodnota pole :attribute není platná.',
+    'integer' => ':attribute musí být celé číslo.',
+    'max' => ['numeric' => ':attribute může být nejvýše :max.', 'string' => ':attribute může mít nejvýše :max znaků.', 'file' => 'Soubor :attribute může mít nejvýše :max kB.', 'array' => ':attribute může mít nejvýše :max položek.'],
+    'min' => ['numeric' => ':attribute musí být alespoň :min.', 'string' => ':attribute musí mít alespoň :min znaků.', 'file' => 'Soubor :attribute musí mít alespoň :min kB.', 'array' => ':attribute musí mít alespoň :min položek.'],
+    'numeric' => ':attribute musí být číslo.',
+    'prohibited' => 'Pole :attribute musí zůstat prázdné.',
+    'required' => 'Vyplň pole :attribute.',
+    'size' => ['string' => ':attribute musí mít přesně :size znaků.', 'numeric' => ':attribute musí být :size.', 'file' => ':attribute musí mít :size kB.', 'array' => ':attribute musí mít :size položek.'],
+    'string' => ':attribute musí být text.',
+    'unique' => 'Tato hodnota pole :attribute už existuje.',
+    'uploaded' => 'Soubor :attribute se nepodařilo nahrát.',
+    'url' => ':attribute musí být platná adresa URL.',
+
+    'attributes' => [
+        'email' => 'e-mail', 'password' => 'heslo', 'name' => 'jméno', 'phone' => 'telefon', 'street' => 'ulice', 'city' => 'město',
+        'zip' => 'PSČ', 'pickup_point' => 'výdejní místo', 'terms' => 'souhlas s obchodními podmínkami', 'body' => 'zpráva',
+        'author_name' => 'jméno', 'rating' => 'hodnocení', 'title' => 'název', 'before_image' => 'fotka před', 'after_image' => 'fotka po',
+        'car_model_id' => 'model auta', 'year' => 'rok výroby', 'vin' => 'VIN', 'photo' => 'fotka', 'current_password' => 'současné heslo',
+        'code' => 'kód', 'subject' => 'předmět', 'attachment' => 'příloha', 'shipping_method_id' => 'doprava', 'payment_method_id' => 'platba',
+    ],
+];

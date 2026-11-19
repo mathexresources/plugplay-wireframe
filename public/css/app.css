@@ -1,0 +1,102 @@
+/* PlugPlay.cz – vrstva nad Bootstrapem 5, vychází z wireframu (tvrdé stíny, ručně psané nadpisy, modrá „cesta“). */
+:root {
+  --pp-ink: #14171c;
+  --pp-line: #c9ced6;
+  --pp-fill: #eef1f5;
+  --pp-accent: #1f6feb;
+  --pp-accent-2: #ffb703;
+  --pp-ok: #1a7f37;
+  --bs-body-font-family: "Inter", system-ui, sans-serif;
+  --bs-body-color: var(--pp-ink);
+  --bs-primary: #1f6feb;
+  --bs-primary-rgb: 31, 111, 235;
+  --bs-link-color: #1f6feb;
+  --bs-link-color-rgb: 31, 111, 235;
+}
+body { background: #f7f8fa; }
+h1, h2, h3, .display-5, .display-6, .pp-hand { font-family: "Kalam", cursive; font-weight: 700; }
+.pp-hand { font-weight: 400; }
+
+/* school project ribbon */
+.pp-school { background: var(--pp-accent-2); color: #3b2a00; font-size: .85rem; }
+.pp-school-hero { background: #fff7d6; border: 2px dashed #e0a800; border-radius: .75rem; }
+
+/* images / placeholders */
+.pp-img { position: relative; background: linear-gradient(135deg, #e8eefb, #f6f8fc); border-radius: .5rem; overflow: hidden; min-height: 80px; display: grid; place-items: center; }
+.pp-img img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.pp-img > i { font-size: 2.6rem; color: #8aa6d6; }
+.pp-img.sm > i { font-size: 1.4rem; }
+.pp-box { border: 2px dashed var(--pp-line); border-radius: .75rem; background: #fff; }
+.pp-card { border: 2px solid var(--pp-ink); border-radius: .75rem; background: #fff; box-shadow: 4px 4px 0 var(--pp-ink); }
+.btn { border-width: 2px; font-weight: 600; }
+.btn-dark { box-shadow: 3px 3px 0 var(--pp-accent); }
+.btn-dark:active { box-shadow: none; transform: translate(2px, 2px); }
+a.pp-box:hover, a.pp-card:hover { border-color: var(--pp-accent); }
+
+/* header */
+.pp-logo { font-family: "Kalam", cursive; font-weight: 700; font-size: 1.6rem; color: var(--pp-ink); text-decoration: none; }
+.pp-logo b { color: var(--pp-accent); }
+.pp-car-pill { border: 2px solid var(--pp-ink); border-radius: 999px; padding: .3rem .9rem; background: #fff; display: inline-flex; align-items: center; gap: .5rem; font-size: .9rem; color: inherit; }
+
+/* journey stepper */
+.pp-journey { background: #fff; border-bottom: 2px solid var(--pp-ink); }
+.pp-journey ol { list-style: none; display: flex; margin: 0; padding: 0; overflow-x: auto; }
+.pp-journey li { flex: 1 0 auto; position: relative; }
+.pp-journey a, .pp-journey span.lbl { display: flex; align-items: center; gap: .5rem; padding: .7rem 1rem; color: #8a929e; text-decoration: none; font-size: .9rem; white-space: nowrap; }
+.pp-journey .num { width: 1.7rem; height: 1.7rem; border-radius: 50%; border: 2px solid currentColor; display: inline-grid; place-items: center; font-weight: 700; font-size: .8rem; }
+.pp-journey li.done a { color: var(--pp-ink); }
+.pp-journey li.done .num { background: var(--pp-ink); color: #fff; border-color: var(--pp-ink); }
+.pp-journey li.active a { color: var(--pp-accent); font-weight: 700; }
+.pp-journey li.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 4px; background: var(--pp-accent); }
+
+/* difficulty */
+.pp-diff { display: inline-flex; gap: 2px; vertical-align: middle; }
+.pp-diff i { color: #c3c8d0; }
+.pp-diff i.on { color: var(--pp-ink); }
+
+/* car blueprint */
+.pp-blueprint { position: relative; aspect-ratio: 16 / 7; border: 2px solid var(--pp-ink); border-radius: 1rem;
+  background: linear-gradient(#e3e9f3 1px, transparent 1px) 0 0 / 24px 24px, linear-gradient(90deg, #e3e9f3 1px, transparent 1px) 0 0 / 24px 24px, #fff; }
+.pp-blueprint svg { position: absolute; inset: 6% 4%; width: 92%; height: 88%; }
+.pp-hot { position: absolute; transform: translate(-50%, -50%); border: 2px solid var(--pp-ink); background: #fff; border-radius: 999px;
+  padding: .25rem .7rem .25rem .3rem; font-size: .85rem; display: flex; align-items: center; gap: .4rem; white-space: nowrap; color: var(--pp-ink); text-decoration: none; }
+.pp-hot .dot { width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--pp-ink); color: #fff; display: grid; place-items: center; font-size: .75rem; font-weight: 700; }
+.pp-hot.active, .pp-hot:hover { background: var(--pp-accent); color: #fff; border-color: var(--pp-accent); }
+.pp-hot.active .dot, .pp-hot:hover .dot { background: #fff; color: var(--pp-accent); }
+.pp-hot.empty { opacity: .45; }
+
+/* chips */
+.pp-chip { border: 2px solid var(--pp-line); border-radius: 999px; padding: .3rem .85rem; background: #fff; font-size: .9rem;
+  display: inline-flex; align-items: center; gap: .35rem; color: inherit; text-decoration: none; }
+a.pp-chip:hover { border-color: var(--pp-ink); }
+.pp-chip.on { border-color: var(--pp-ink); background: var(--pp-ink); color: #fff; }
+.pp-chip.on .pp-diff i { color: #6b7280; } .pp-chip.on .pp-diff i.on { color: #fff; }
+
+/* product card */
+.pp-product { border: 2px solid var(--pp-ink); border-radius: .75rem; background: #fff; height: 100%; display: flex; flex-direction: column; transition: transform .1s; }
+.pp-product:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--pp-accent); }
+.pp-product .pp-img { border-bottom: 2px solid var(--pp-line); border-radius: .6rem .6rem 0 0; aspect-ratio: 4/3; }
+.pp-fit { font-size: .75rem; font-weight: 700; color: var(--pp-accent); text-transform: uppercase; letter-spacing: .03em; }
+.pp-product.harder { opacity: .55; }
+
+/* plan timeline */
+.pp-timeline { border-left: 3px dashed var(--pp-line); margin-left: 1rem; padding-left: 1.75rem; }
+.pp-timeline .step { position: relative; }
+.pp-timeline .step::before { content: attr(data-n); position: absolute; left: -2.85rem; top: .9rem; width: 2rem; height: 2rem; border-radius: 50%; background: var(--pp-ink); color: #fff; display: grid; place-items: center; font-weight: 700; }
+
+/* payment dead end */
+.pp-paywall { border: 3px dashed #c0392b; border-radius: 1rem; background: repeating-linear-gradient(45deg, #fff, #fff 12px, #fff4f2 12px, #fff4f2 24px); }
+
+.pp-radio:has(input:checked) { border-color: var(--pp-ink); border-style: solid; box-shadow: 3px 3px 0 var(--pp-accent); }
+.pp-radio { cursor: pointer; }
+
+/* admin */
+.pp-admin-nav .nav-link { color: #cfd6e0; border-radius: .4rem; padding: .4rem .7rem; }
+.pp-admin-nav .nav-link:hover, .pp-admin-nav .nav-link.active { background: #2a3140; color: #fff; }
+.pp-stat { border: 2px solid var(--pp-ink); border-radius: .75rem; background: #fff; box-shadow: 3px 3px 0 var(--pp-ink); }
+
+@media (max-width: 575.98px) {
+  .pp-hot { font-size: .7rem; padding: .15rem .5rem .15rem .2rem; }
+  .pp-hot .label { display: none; }
+  .pp-blueprint { aspect-ratio: 4 / 3; }
+}
