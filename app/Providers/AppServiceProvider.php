@@ -8,6 +8,7 @@ use App\Models\CarModel;
 use App\Support\Cart;
 use App\Support\CarContext;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,6 +19,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::useBootstrapFive();
+
+        // Behind Cloudflare Tunnel / reverse proxy the app itself talks plain HTTP – generate https links when APP_URL says so
+        if (str_starts_with((string) config('app.url'), 'https://')) {
+            URL::forceScheme('https');
+            URL::forceRootUrl(config('app.url'));
+        }
 
         View::composer('layouts.app', function ($view) {
             $user = auth()->user();
