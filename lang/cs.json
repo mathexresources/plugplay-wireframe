@@ -1,0 +1,16 @@
+{
+    "Reset Password Notification": "Obnovení hesla – PlugPlay.cz",
+    "You are receiving this email because we received a password reset request for your account.": "Dostal jsi tento e-mail, protože někdo požádal o obnovení hesla k tvému účtu.",
+    "Reset Password": "Nastavit nové heslo",
+    "This password reset link will expire in :count minutes.": "Odkaz platí :count minut.",
+    "If you did not request a password reset, no further action is required.": "Pokud jsi o změnu nežádal, nemusíš nic dělat.",
+    "Too Many Requests": "Příliš mnoho požadavků",
+    "Not Found": "Stránka nenalezena",
+    "Forbidden": "Přístup odepřen",
+    "Page Expired": "Platnost stránky vypršela",
+    "Server Error": "Chyba serveru",
+    "Showing": "Zobrazeno",
+    "to": "až",
+    "of": "z",
+    "results": "výsledků"
+}

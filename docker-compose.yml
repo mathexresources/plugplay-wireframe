@@ -1,0 +1,37 @@
+# Spuštění na Raspberry Pi:  docker compose up -d --build   → http://<ip-raspberry>:8080
+services:
+  app:
+    build: .
+    container_name: plugplay
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_URL: "http://localhost:8080"   # změň na veřejnou adresu (např. https://plugplay.cz)
+      DB_CONNECTION: sqlite
+      DB_DATABASE: /var/www/html/database/data/database.sqlite
+      LOG_CHANNEL: stderr
+      MAIL_MAILER: log
+    volumes:
+      - plugplay-db:/var/www/html/database/data
+      - plugplay-storage:/var/www/html/storage
+
+  # Varianta s MariaDB: odkomentuj, v `app` nastav DB_CONNECTION=mariadb, DB_HOST=db, DB_DATABASE=plugplay,
+  # DB_USERNAME=plugplay, DB_PASSWORD=… a přidej `depends_on: [db]`.
+  # db:
+  #   image: mariadb:11
+  #   restart: unless-stopped
+  #   environment:
+  #     MARIADB_DATABASE: plugplay
+  #     MARIADB_USER: plugplay
+  #     MARIADB_PASSWORD: zmen-me
+  #     MARIADB_ROOT_PASSWORD: zmen-me-taky
+  #   volumes:
+  #     - plugplay-mariadb:/var/lib/mysql
+
+volumes:
+  plugplay-db:
+  plugplay-storage:
+  # plugplay-mariadb:
